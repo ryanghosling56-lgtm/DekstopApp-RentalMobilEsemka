@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Rental_Mobil_Esemka
+{
+    public partial class UC_Mobil : UserControl
+    {
+        public UC_Mobil()
+        {
+            InitializeComponent();
+        }
+    }
+}

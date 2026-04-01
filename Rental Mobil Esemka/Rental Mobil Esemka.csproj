@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1012DED-ECED-42B0-86C2-9C98554BF584}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Rental_Mobil_Esemka</RootNamespace>
+    <AssemblyName>Rental Mobil Esemka</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDashboard.Designer.cs">
+      <DependentUpon>formDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDetailTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDetailTransaksi.Designer.cs">
+      <DependentUpon>formDetailTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formKursiTambahan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formKursiTambahan.Designer.cs">
+      <DependentUpon>formKursiTambahan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMobil.Designer.cs">
+      <DependentUpon>formMobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransaksi.Designer.cs">
+      <DependentUpon>formTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTypeIndentity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTypeIndentity.Designer.cs">
+      <DependentUpon>formTypeIndentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formUser.Designer.cs">
+      <DependentUpon>formUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KoneksiDatabase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="session.cs" />
+    <Compile Include="UC_CarSeat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CarSeat.Designer.cs">
+      <DependentUpon>UC_CarSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DetailTransaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DetailTransaksi.Designer.cs">
+      <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ManajemenUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ManajemenUser.Designer.cs">
+      <DependentUpon>UC_ManajemenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Mobil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Mobil.Designer.cs">
+      <DependentUpon>UC_Mobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Pelanggan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Pelanggan.Designer.cs">
+      <DependentUpon>UC_Pelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_TipeIdentitas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_TipeIdentitas.Designer.cs">
+      <DependentUpon>UC_TipeIdentitas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formDashboard.resx">
+      <DependentUpon>formDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_ManajemenUser.resx">
+      <DependentUpon>UC_ManajemenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_13260.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_rental_hotel_icon_141815.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car90_42507.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_vehicle_transport_icon_144665.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_users_applications_search_2908.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_icon_237775.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out_icon-icons.com_50106.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_closethesession_close_6317.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction_minus_icon_244826.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchmagnifierinterfacesymbol1_79893.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_group_customers_clients_icon-icons.com_72448.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identity_card_id_icon_123863.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_child_seat_icon_137817.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powercircleandlinesymbol_118369.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
