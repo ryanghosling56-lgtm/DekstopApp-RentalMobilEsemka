@@ -21,7 +21,8 @@ namespace Rental_Mobil_Esemka
         {
             InitializeComponent();
             TampilMobil();
-            LoadData();
+            LoadCmbKursi();
+            ClearField();
 
         }
 
@@ -32,8 +33,9 @@ namespace Rental_Mobil_Esemka
             txtPlat.Clear();
             txtColor.Clear();
             txtStatusUnit.Clear();
-            txtJmlahKursi.Clear();
             txtHargaRental.Clear();
+            cmbKursi.SelectedIndex = -1;
+            dtpMobil.Value = DateTime.Now;
 
         }
 
@@ -44,7 +46,7 @@ namespace Rental_Mobil_Esemka
             {
                 try
                 {
-                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.kursi_mobil_id, m.image_path FROM Mobil m JOIN kursitambahan k ON m.kursi_mobil_id = k.kursitambahan_id";
+                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.jumlah_kursi, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.id";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -65,7 +67,7 @@ namespace Rental_Mobil_Esemka
             {
                 try
                 {
-                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.kursi_mobil_id, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.kursitambahan_id";
+                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.jumlah_kursi, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.id";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -79,11 +81,34 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+        private void LoadCmbKursi()
+        {
+            using (SqlConnection conn = KoneksiDatabase.GetConn())
+            {
+                try
+                {
+                    string sql = "SELECT id, jumlah_kursi FROM kursimobil";
+                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    cmbKursi.ValueMember = "id";
+                    cmbKursi.DisplayMember = "jumlah_kursi";
+                    cmbKursi.DataSource = dt;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
 
 
 
 
 
+        //button uploud gambar!!
 
         private void btnUploud_Click(object sender, EventArgs e)
         {
@@ -95,10 +120,10 @@ namespace Rental_Mobil_Esemka
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
                         string imagePath = ofd.FileName;
-                        pictureBox1.Image = Image.FromFile(imagePath);
-                        pictureBox1.Tag = ofd.FileName; // Simpan path gambar di Tag untuk digunakan nanti
+                        pictureBoxUploud.Image = Image.FromFile(imagePath);
+                        pictureBoxUploud.Tag = ofd.FileName; // Simpan path gambar di Tag untuk digunakan nanti
 
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBoxUploud.SizeMode = PictureBoxSizeMode.StretchImage;
 
                     }
                 }
@@ -123,7 +148,7 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "INSERT INTO Users (brand, plate, color, year, status, harga_rental, kursi_mobil_id, image_path) VALUES (@brd, @plate, @color, @year, @status, @harga_rental, @kmi, @image_path)";
+                    string sql = "INSERT INTO Mobil (brand, plate, color, year, status, harga_rental, kursi_mobil_id, image_path) VALUES (@brd, @plate, @color, @year, @status, @harga_rental, @kursi, @image_path)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@brd", txtBrand.Text);
@@ -132,8 +157,7 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@year", dtpMobil.Text);
                     cmd.Parameters.AddWithValue("@status", txtStatusUnit.Text);
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
-                    cmd.Parameters.AddWithValue("@kmi", txtJmlahKursi.Text);
-
+                    cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
 
                     //Validasi apakah gambar sudah diunggah atau belum
 
@@ -179,7 +203,7 @@ namespace Rental_Mobil_Esemka
                 txtColor.Text = row.Cells[3].Value.ToString();
                 txtStatusUnit.Text = row.Cells[4].Value.ToString();
                 txtHargaRental.Text = row.Cells[5].Value.ToString();
-                txtJmlahKursi.Text = row.Cells[6].Value.ToString();
+                cmbKursi.Text = row.Cells[6].Value.ToString();
             }
 
 
@@ -205,7 +229,7 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "UPDATE Mobil SET brand = @brd, plate = @plate, color = @color, year = @year, status = @status, harga_rental = @harga_rental, kursi_mobil_id = @kmi, image_path = @image_path WHERE mobil_id = @mobil_id";
+                    string sql = "UPDATE Mobil SET brand = @brd, plate = @plate, color = @color, year = @year, status = @status, harga_rental = @harga_rental, jumlah_kursi = @kursi, image_path = @image_path WHERE mobil_id = @mobil_id";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@mobil_id", SelectedCarId);
                     cmd.Parameters.AddWithValue("@brd", txtBrand.Text);
@@ -214,7 +238,7 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@year", dtpMobil.Text);
                     cmd.Parameters.AddWithValue("@status", txtStatusUnit.Text);
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
-                    cmd.Parameters.AddWithValue("@kmi", txtJmlahKursi.Text);
+                    cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
 
                     if (pictureBoxUploud.Tag != null)
                     {
@@ -260,8 +284,8 @@ namespace Rental_Mobil_Esemka
                     TampilMobil();
                     ClearField();
 
-                    pictureBox1.Image = null;
-                    pictureBox1.Tag = null;
+                    pictureBoxUploud.Image = null;
+                    pictureBoxUploud.Tag = null;
                 }
                 catch (Exception ex)
                 {
@@ -276,7 +300,7 @@ namespace Rental_Mobil_Esemka
             {
                 try
                 {
-                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.kursi_mobil_id, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.kursitambahan_id WHERE brand LIKE @search OR plate LIKE @search OR color LIKE @search OR status LIKE @search OR harga_rental LIKE @search OR kursi_mobil LIKE @search";
+                    string sql = @"SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.jumlah_kursi, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.id WHERE brand LIKE @search OR plate LIKE @search OR color LIKE @search OR status LIKE @search OR harga_rental LIKE @search OR jumlah_kursi LIKE @search";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     da.SelectCommand.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
                     DataTable dt = new DataTable();
@@ -290,18 +314,28 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+
+        //dtp select tahun mobil!! 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            int TahunPilihan =  dtpMobil.Value.Year;
+
             using (SqlConnection conn = KoneksiDatabase.GetConn())
             {
                 try
                 {
-                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.kursi_mobil_id, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.kursitambahan_id WHERE CAST(m.year AS DATE) = @year";
-                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-                    da.SelectCommand.Parameters.AddWithValue("@year", dtpMobil.Value.Year);
+                    string sql = "SELECT m.mobil_id, m.brand, m.plate, m.color, m.year, m.status, m.harga_rental, k.kursi_mobil_id, m.image_path FROM Mobil m JOIN kursimobil k ON m.kursi_mobil_id = k.kursitambahan_id WHERE YEAR(year) = @tahun";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@tahun", TahunPilihan);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
+
                     dataGridView1.DataSource = dt;
+
+
                 }
                 catch (Exception ex)
                 {
@@ -311,6 +345,11 @@ namespace Rental_Mobil_Esemka
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UC_Mobil_Load(object sender, EventArgs e)
         {
 
         }

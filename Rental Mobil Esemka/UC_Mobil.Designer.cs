@@ -40,12 +40,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHargaRental = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtStatusUnit = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtJmlahKursi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpMobil = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,23 +53,23 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBoxUploud = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbKursi = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUploud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 290);
+            this.label2.Location = new System.Drawing.Point(284, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 50;
@@ -93,7 +93,7 @@
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(285, 309);
+            this.txtColor.Location = new System.Drawing.Point(59, 300);
             this.txtColor.Multiline = true;
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(195, 32);
@@ -110,7 +110,7 @@
             // Penulis
             // 
             this.Penulis.AutoSize = true;
-            this.Penulis.Location = new System.Drawing.Point(282, 290);
+            this.Penulis.Location = new System.Drawing.Point(56, 281);
             this.Penulis.Name = "Penulis";
             this.Penulis.Size = new System.Drawing.Size(39, 16);
             this.Penulis.TabIndex = 45;
@@ -175,10 +175,21 @@
             this.panel1.Size = new System.Drawing.Size(200, 33);
             this.panel1.TabIndex = 40;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource.searchmagnifierinterfacesymbol1_79893;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(503, 290);
+            this.label3.Location = new System.Drawing.Point(458, 291);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 52;
@@ -218,14 +229,6 @@
             this.label6.TabIndex = 56;
             this.label6.Text = "Status";
             // 
-            // txtJmlahKursi
-            // 
-            this.txtJmlahKursi.Location = new System.Drawing.Point(59, 309);
-            this.txtJmlahKursi.Multiline = true;
-            this.txtJmlahKursi.Name = "txtJmlahKursi";
-            this.txtJmlahKursi.Size = new System.Drawing.Size(195, 32);
-            this.txtJmlahKursi.TabIndex = 58;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -239,7 +242,7 @@
             // 
             // dtpMobil
             // 
-            this.dtpMobil.Location = new System.Drawing.Point(506, 309);
+            this.dtpMobil.Location = new System.Drawing.Point(461, 310);
             this.dtpMobil.Name = "dtpMobil";
             this.dtpMobil.Size = new System.Drawing.Size(200, 22);
             this.dtpMobil.TabIndex = 62;
@@ -266,7 +269,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.btnUploud);
             this.panel2.Location = new System.Drawing.Point(941, 233);
@@ -280,36 +282,30 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(55, 428);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1186, 471);
+            this.dataGridView1.Size = new System.Drawing.Size(1186, 311);
             this.dataGridView1.TabIndex = 67;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Location = new System.Drawing.Point(271, 40);
+            this.panel3.Location = new System.Drawing.Point(267, 40);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(80, 35);
             this.panel3.TabIndex = 97;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(50, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(21, 22);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // pictureBox3
             // 
@@ -322,9 +318,16 @@
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(50, 7);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(21, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // pictureBoxUploud
             // 
-            this.pictureBoxUploud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxUploud.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBoxUploud.Location = new System.Drawing.Point(957, 274);
             this.pictureBoxUploud.Name = "pictureBoxUploud";
@@ -332,29 +335,27 @@
             this.pictureBoxUploud.TabIndex = 63;
             this.pictureBoxUploud.TabStop = false;
             // 
-            // pictureBox1
+            // cmbKursi
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource.searchmagnifierinterfacesymbol1_79893;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.cmbKursi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKursi.FormattingEnabled = true;
+            this.cmbKursi.Location = new System.Drawing.Point(287, 312);
+            this.cmbKursi.Name = "cmbKursi";
+            this.cmbKursi.Size = new System.Drawing.Size(155, 24);
+            this.cmbKursi.TabIndex = 37;
             // 
             // UC_Mobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Controls.Add(this.cmbKursi);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBoxUploud);
             this.Controls.Add(this.dtpMobil);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtJmlahKursi);
             this.Controls.Add(this.txtStatusUnit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtHargaRental);
@@ -374,14 +375,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "UC_Mobil";
-            this.Size = new System.Drawing.Size(1329, 933);
+            this.Size = new System.Drawing.Size(1329, 841);
+            this.Load += new System.EventHandler(this.UC_Mobil_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUploud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,7 +408,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStatusUnit;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtJmlahKursi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpMobil;
         private System.Windows.Forms.PictureBox pictureBoxUploud;
@@ -417,5 +418,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmbKursi;
     }
 }

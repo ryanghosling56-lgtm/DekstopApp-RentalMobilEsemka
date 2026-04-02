@@ -44,7 +44,7 @@ namespace Rental_Mobil_Esemka
 
         private void formDashboard_Load(object sender, EventArgs e)
         {
-            label1.Text = $"{session.NamaUser} - {session.NamaRole}";
+            labelStatusUser.Text = $"{session.NamaUser} - {session.NamaRole}";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,14 +70,26 @@ namespace Rental_Mobil_Esemka
 
         }
 
+        //User control dashboard
+
+        private void dasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelMainSide.Controls.Clear();
+            UC_Dashboard uC_Dashboard = new UC_Dashboard();
+            uC_Dashboard.Dock = DockStyle.Fill;
+
+            PanelMainSide.Controls.Add(uC_Dashboard);
+
+        }
+
         //user control manajemen user
         private void manajemenUserToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            PanelMainSide.Controls.Clear();
             UC_ManajemenUser manajemenUser = new UC_ManajemenUser();
 
+            manajemenUser.Dock = DockStyle.Fill;
 
-
-            PanelMainSide.Controls.Clear();
             PanelMainSide.Controls.Add(manajemenUser);
 
         }
@@ -85,36 +97,45 @@ namespace Rental_Mobil_Esemka
         //user control manajemen Mobil
         private void manajementMobilToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PanelMainSide.Controls.Clear();
             UC_Mobil manajemenMobil = new UC_Mobil();
 
-            PanelMainSide.Controls.Clear();
+            manajemenMobil.Dock = DockStyle.Fill;
+
+          
             PanelMainSide.Controls.Add(manajemenMobil);
         }
 
         //user control manajemen pelanggan
         private void manajemenCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PanelMainSide.Controls.Clear();
             UC_Pelanggan manajemenPelanggan = new UC_Pelanggan();
 
-            PanelMainSide.Controls.Clear();
+            manajemenPelanggan.Dock = DockStyle.Fill;
+
+           
             PanelMainSide.Controls.Add(manajemenPelanggan);
         }
 
         //user control manajemen tipe identitas
         private void manajemenTipeIdentitasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PanelMainSide.Controls.Clear();
             UC_TipeIdentitas uC_TipeIdentitas = new UC_TipeIdentitas();
 
-            PanelMainSide.Controls.Clear();
+            uC_TipeIdentitas.Dock = DockStyle.Fill;
+
             PanelMainSide.Controls.Add(uC_TipeIdentitas);
         }
 
         //user control manajemen car seat
         private void manajemenCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UC_CarSeat uC_CarSeat = new UC_CarSeat();
-
             PanelMainSide.Controls.Clear();
+            UC_CarSeat uC_CarSeat = new UC_CarSeat();
+            uC_CarSeat.Dock = DockStyle.Fill;
+
             PanelMainSide.Controls.Add(uC_CarSeat);    
 
         }
@@ -122,9 +143,10 @@ namespace Rental_Mobil_Esemka
         //user control manajemen detail transaksi
         private void detailTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UC_DetailTransaksi uC_DetailTransaksi = new UC_DetailTransaksi();
-
             PanelMainSide.Controls.Clear();
+            UC_DetailTransaksi uC_DetailTransaksi = new UC_DetailTransaksi();
+            uC_DetailTransaksi.Dock = DockStyle.Fill;   
+         
             PanelMainSide.Controls.Add(uC_DetailTransaksi); 
         }
 
@@ -157,7 +179,12 @@ namespace Rental_Mobil_Esemka
             }
         }
 
-        private void dasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelStatusUser_Click(object sender, EventArgs e)
         {
 
         }

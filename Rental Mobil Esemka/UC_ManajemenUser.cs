@@ -80,11 +80,11 @@ namespace Rental_Mobil_Esemka
                     cmbRole.DataSource = dt;
 
 
-                    string sqlLevel = "SELECT user_id, level FROM users";
+                    string sqlLevel = "SELECT DISTINCT user_id, level FROM users";
                     SqlCommand cmdLevel = new SqlCommand(sqlLevel, conn);
                     SqlDataReader drLevel = cmdLevel.ExecuteReader();
                     DataTable dtLevel = new DataTable();
-                    dt.Load(drLevel);
+                    dtLevel.Load(drLevel);
 
                     cmbLevel.ValueMember = "user_id";
                     cmbLevel.DisplayMember = "level";
@@ -234,6 +234,8 @@ namespace Rental_Mobil_Esemka
         private void UC_ManajemenUser_Load(object sender, EventArgs e)
         {
            LoadData();
+           LoadCmbRole();
+
             
 
         }

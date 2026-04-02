@@ -31,33 +31,37 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.labelStatusUser = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip11 = new System.Windows.Forms.MenuStrip();
-            this.PanelMainSide = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip8 = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.detailTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.manajemenCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip6 = new System.Windows.Forms.MenuStrip();
             this.manajemenTipeIdentitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
             this.manajemenCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
             this.manajementMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip11 = new System.Windows.Forms.MenuStrip();
             this.manajemenUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.dasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PanelMainSide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip3.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
@@ -65,9 +69,8 @@
             this.menuStrip7.SuspendLayout();
             this.menuStrip10.SuspendLayout();
             this.menuStrip11.SuspendLayout();
-            this.PanelMainSide.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.menuStrip8.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +80,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.menuStrip3);
@@ -91,6 +95,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 486);
             this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.labelStatusUser);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(0, 433);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(239, 50);
+            this.panel4.TabIndex = 13;
+            // 
+            // labelStatusUser
+            // 
+            this.labelStatusUser.BackColor = System.Drawing.Color.LightGray;
+            this.labelStatusUser.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusUser.Location = new System.Drawing.Point(40, 7);
+            this.labelStatusUser.Name = "labelStatusUser";
+            this.labelStatusUser.Size = new System.Drawing.Size(192, 35);
+            this.labelStatusUser.TabIndex = 4;
+            this.labelStatusUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelStatusUser.Click += new System.EventHandler(this.labelStatusUser_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox2.Image = global::Rental_Mobil_Esemka.Resource._4092564_about_mobile_ui_profile_ui_user_website_114033;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -115,6 +152,7 @@
             // menuStrip3
             // 
             this.menuStrip3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
@@ -123,144 +161,6 @@
             this.menuStrip3.Size = new System.Drawing.Size(239, 28);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
-            // 
-            // menuStrip4
-            // 
-            this.menuStrip4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.detailTransaksiToolStripMenuItem});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 168);
-            this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip4.TabIndex = 3;
-            this.menuStrip4.Text = "menuStrip4";
-            // 
-            // menuStrip5
-            // 
-            this.menuStrip5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajemenCToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(0, 140);
-            this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip5.TabIndex = 4;
-            this.menuStrip5.Text = "menuStrip5";
-            // 
-            // menuStrip6
-            // 
-            this.menuStrip6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip6.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajemenTipeIdentitasToolStripMenuItem});
-            this.menuStrip6.Location = new System.Drawing.Point(0, 112);
-            this.menuStrip6.Name = "menuStrip6";
-            this.menuStrip6.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip6.TabIndex = 5;
-            this.menuStrip6.Text = "menuStrip6";
-            this.menuStrip6.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip6_ItemClicked);
-            // 
-            // menuStrip7
-            // 
-            this.menuStrip7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajemenCustomerToolStripMenuItem});
-            this.menuStrip7.Location = new System.Drawing.Point(0, 84);
-            this.menuStrip7.Name = "menuStrip7";
-            this.menuStrip7.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip7.TabIndex = 6;
-            this.menuStrip7.Text = "menuStrip7";
-            // 
-            // menuStrip10
-            // 
-            this.menuStrip10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip10.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajementMobilToolStripMenuItem});
-            this.menuStrip10.Location = new System.Drawing.Point(0, 56);
-            this.menuStrip10.Name = "menuStrip10";
-            this.menuStrip10.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip10.TabIndex = 9;
-            this.menuStrip10.Text = "menuStrip10";
-            // 
-            // menuStrip11
-            // 
-            this.menuStrip11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip11.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip11.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajemenUserToolStripMenuItem});
-            this.menuStrip11.Location = new System.Drawing.Point(0, 28);
-            this.menuStrip11.Name = "menuStrip11";
-            this.menuStrip11.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip11.TabIndex = 10;
-            this.menuStrip11.Text = "menuStrip11";
-            // 
-            // PanelMainSide
-            // 
-            this.PanelMainSide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelMainSide.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PanelMainSide.Controls.Add(this.panel3);
-            this.PanelMainSide.Location = new System.Drawing.Point(239, 1);
-            this.PanelMainSide.Name = "PanelMainSide";
-            this.PanelMainSide.Size = new System.Drawing.Size(837, 585);
-            this.PanelMainSide.TabIndex = 1;
-            this.PanelMainSide.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMainSide_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(837, 48);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 48);
-            this.panel2.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 33);
-            this.label1.TabIndex = 4;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // menuStrip8
-            // 
-            this.menuStrip8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip8.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dasToolStripMenuItem});
-            this.menuStrip8.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip8.Name = "menuStrip8";
-            this.menuStrip8.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip8.TabIndex = 11;
-            this.menuStrip8.Text = "menuStrip8";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource._4092564_about_mobile_ui_profile_ui_user_website_114033;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // toolStripMenuItem1
             // 
@@ -292,6 +192,19 @@
             this.manajemenToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenToolStripMenuItem.Click += new System.EventHandler(this.manajemenToolStripMenuItem_Click_1);
             // 
+            // menuStrip4
+            // 
+            this.menuStrip4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detailTransaksiToolStripMenuItem});
+            this.menuStrip4.Location = new System.Drawing.Point(0, 168);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip4.TabIndex = 3;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
             // detailTransaksiToolStripMenuItem
             // 
             this.detailTransaksiToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.transaction_minus_icon_244826;
@@ -300,6 +213,19 @@
             this.detailTransaksiToolStripMenuItem.Text = "Detail Transaksi";
             this.detailTransaksiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.detailTransaksiToolStripMenuItem.Click += new System.EventHandler(this.detailTransaksiToolStripMenuItem_Click);
+            // 
+            // menuStrip5
+            // 
+            this.menuStrip5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajemenCToolStripMenuItem});
+            this.menuStrip5.Location = new System.Drawing.Point(0, 140);
+            this.menuStrip5.Name = "menuStrip5";
+            this.menuStrip5.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip5.TabIndex = 4;
+            this.menuStrip5.Text = "menuStrip5";
             // 
             // manajemenCToolStripMenuItem
             // 
@@ -310,6 +236,20 @@
             this.manajemenCToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenCToolStripMenuItem.Click += new System.EventHandler(this.manajemenCToolStripMenuItem_Click);
             // 
+            // menuStrip6
+            // 
+            this.menuStrip6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip6.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip6.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajemenTipeIdentitasToolStripMenuItem});
+            this.menuStrip6.Location = new System.Drawing.Point(0, 112);
+            this.menuStrip6.Name = "menuStrip6";
+            this.menuStrip6.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip6.TabIndex = 5;
+            this.menuStrip6.Text = "menuStrip6";
+            this.menuStrip6.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip6_ItemClicked);
+            // 
             // manajemenTipeIdentitasToolStripMenuItem
             // 
             this.manajemenTipeIdentitasToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.identity_card_id_icon_123863;
@@ -318,6 +258,19 @@
             this.manajemenTipeIdentitasToolStripMenuItem.Text = "Manajemen Tipe Identitas";
             this.manajemenTipeIdentitasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenTipeIdentitasToolStripMenuItem.Click += new System.EventHandler(this.manajemenTipeIdentitasToolStripMenuItem_Click);
+            // 
+            // menuStrip7
+            // 
+            this.menuStrip7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajemenCustomerToolStripMenuItem});
+            this.menuStrip7.Location = new System.Drawing.Point(0, 84);
+            this.menuStrip7.Name = "menuStrip7";
+            this.menuStrip7.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip7.TabIndex = 6;
+            this.menuStrip7.Text = "menuStrip7";
             // 
             // manajemenCustomerToolStripMenuItem
             // 
@@ -328,6 +281,19 @@
             this.manajemenCustomerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenCustomerToolStripMenuItem.Click += new System.EventHandler(this.manajemenCustomerToolStripMenuItem_Click);
             // 
+            // menuStrip10
+            // 
+            this.menuStrip10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip10.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip10.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajementMobilToolStripMenuItem});
+            this.menuStrip10.Location = new System.Drawing.Point(0, 56);
+            this.menuStrip10.Name = "menuStrip10";
+            this.menuStrip10.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip10.TabIndex = 9;
+            this.menuStrip10.Text = "menuStrip10";
+            // 
             // manajementMobilToolStripMenuItem
             // 
             this.manajementMobilToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.car_vehicle_transport_icon_144665;
@@ -336,6 +302,19 @@
             this.manajementMobilToolStripMenuItem.Text = "Manajement Mobil";
             this.manajementMobilToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajementMobilToolStripMenuItem.Click += new System.EventHandler(this.manajementMobilToolStripMenuItem_Click);
+            // 
+            // menuStrip11
+            // 
+            this.menuStrip11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip11.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip11.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip11.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajemenUserToolStripMenuItem});
+            this.menuStrip11.Location = new System.Drawing.Point(0, 28);
+            this.menuStrip11.Name = "menuStrip11";
+            this.menuStrip11.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip11.TabIndex = 10;
+            this.menuStrip11.Text = "menuStrip11";
             // 
             // manajemenUserToolStripMenuItem
             // 
@@ -346,6 +325,19 @@
             this.manajemenUserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenUserToolStripMenuItem.Click += new System.EventHandler(this.manajemenUserToolStripMenuItem_Click_1);
             // 
+            // menuStrip8
+            // 
+            this.menuStrip8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip8.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip8.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dasToolStripMenuItem});
+            this.menuStrip8.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip8.Name = "menuStrip8";
+            this.menuStrip8.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip8.TabIndex = 11;
+            this.menuStrip8.Text = "menuStrip8";
+            // 
             // dasToolStripMenuItem
             // 
             this.dasToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.house_navigation_button_app_page_dashboard_home_icon_219341;
@@ -354,6 +346,52 @@
             this.dasToolStripMenuItem.Text = "Dasboard";
             this.dasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.dasToolStripMenuItem.Click += new System.EventHandler(this.dasToolStripMenuItem_Click);
+            // 
+            // PanelMainSide
+            // 
+            this.PanelMainSide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelMainSide.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PanelMainSide.Location = new System.Drawing.Point(239, 1);
+            this.PanelMainSide.Name = "PanelMainSide";
+            this.PanelMainSide.Size = new System.Drawing.Size(837, 587);
+            this.PanelMainSide.TabIndex = 1;
+            this.PanelMainSide.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMainSide_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(239, 50);
+            this.panel2.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 35);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Rental Mobil Esemka";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource.car90_42507;
+            this.pictureBox1.Location = new System.Drawing.Point(3, -14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // formDashboard
             // 
@@ -375,6 +413,8 @@
             this.Load += new System.EventHandler(this.formDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
@@ -389,10 +429,9 @@
             this.menuStrip10.PerformLayout();
             this.menuStrip11.ResumeLayout(false);
             this.menuStrip11.PerformLayout();
-            this.PanelMainSide.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.menuStrip8.ResumeLayout(false);
             this.menuStrip8.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -414,7 +453,6 @@
         private System.Windows.Forms.MenuStrip menuStrip7;
         private System.Windows.Forms.Panel PanelMainSide;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -428,5 +466,8 @@
         private System.Windows.Forms.ToolStripMenuItem manajemenUserToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip8;
         private System.Windows.Forms.ToolStripMenuItem dasToolStripMenuItem;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label labelStatusUser;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
