@@ -27,33 +27,12 @@ namespace Rental_Mobil_Esemka
             txtEmail.Clear();
             txtName.Clear();
             txtPass.Clear();
+            
 
             SelectedManajemenUserID = 0;
         }
 
-        //Tampil DGV
-        private void TampilUser()
-        {
-            using (SqlConnection conn = KoneksiDatabase.GetConn())
-            {
-                try
-                {
-                    conn.Open();
-
-                    string sql = "SELECT u.user_id, u.name, u.email, u.password, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id";
-
-                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    dgvUser.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+        
 
         //Koneksi Database
         private void LoadData()
@@ -64,7 +43,7 @@ namespace Rental_Mobil_Esemka
                 {
                     conn.Open();
 
-                    string sql = "SELECT u.user_id, u.name, u.email, u.password, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id";
+                    string sql = "SELECT u.user_id, u.name, u.email, u.password, u.level, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id";
 
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     DataTable dt = new DataTable();
@@ -79,6 +58,7 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+        //Load CMB
         private void LoadCmbRole()
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
@@ -86,19 +66,32 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM [role]";
 
-                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    // Load role data into ComboBox
+                    string sqlRole = "SELECT * FROM [role]";
+
+                    SqlCommand cmd = new SqlCommand(sqlRole, conn);
                     SqlDataReader dr = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
                     dt.Load(dr);
 
-
+                    cmbRole.ValueMember = "id";
                     cmbRole.DisplayMember = "role_name";
-                    cmbRole.ValueMember = "role_id";
                     cmbRole.DataSource = dt;
 
+
+                    string sqlLevel = "SELECT user_id, level FROM users";
+                    SqlCommand cmdLevel = new SqlCommand(sqlLevel, conn);
+                    SqlDataReader drLevel = cmdLevel.ExecuteReader();
+                    DataTable dtLevel = new DataTable();
+                    dt.Load(drLevel);
+
+                    cmbLevel.ValueMember = "user_id";
+                    cmbLevel.DisplayMember = "level";
+                    cmbLevel.DataSource = dtLevel;
+
                     cmbRole.SelectedIndex = -1;
+                    cmbLevel.SelectedIndex = -1; 
 
 
                     // Set default selection to none
@@ -109,6 +102,8 @@ namespace Rental_Mobil_Esemka
                 }
             }
         }
+
+        //Create User!!
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
@@ -122,18 +117,19 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "INSERT INTO Users (name, email, password, role_id) VALUES (@name, @email, @password, @role_id)";
+                    string sql = "INSERT INTO Users (name, email, password, level, role_id) VALUES (@name, @email, @password, @level, @role_id)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@name", txtName.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@password", txtPass.Text);
-                    cmd.Parameters.AddWithValue("@role_id", cmbRole.SelectedValue);
+                    cmd.Parameters.AddWithValue("@level",Convert.ToInt32(cmbLevel.SelectedValue));
+                    cmd.Parameters.AddWithValue("@role_id", Convert.ToInt32(cmbRole.SelectedValue));
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    TampilUser();
+                    LoadData();
                     ClearField();
 
                 }
@@ -162,18 +158,20 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "UPDATE Users SET name = @name, email = @email, password = @password, role_id = @role_id WHERE user_id = @user_id";
+                    string sql = "UPDATE Users SET name = @name, email = @email, password = @password, level = @level, role_id = @role_id WHERE user_id = @user_id";
                     SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@user_id", SelectedManajemenUserID);
                     cmd.Parameters.AddWithValue("@name", txtName.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@password", txtPass.Text);
+                    cmd.Parameters.AddWithValue("@level", cmbLevel.SelectedValue);
                     cmd.Parameters.AddWithValue("@role_id", cmbRole.SelectedValue);
-                    cmd.Parameters.AddWithValue("@user_id", SelectedManajemenUserID);
+                   
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    TampilUser();
+                    LoadData();
                     ClearField();
                 }
                 catch (Exception ex)
@@ -183,6 +181,7 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+        //Hapus Data
         private void btnHapus_Click(object sender, EventArgs e)
         {
             if (SelectedManajemenUserID == 0)
@@ -195,6 +194,7 @@ namespace Rental_Mobil_Esemka
             if (result == DialogResult.Yes)
             {
                 using (SqlConnection conn = KoneksiDatabase.GetConn())
+                {
                     try
                     {
                         conn.Open();
@@ -206,14 +206,18 @@ namespace Rental_Mobil_Esemka
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("User deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        TampilUser();
+                        LoadData();
                         ClearField();
+
+                      
 
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                }
+                    
             }
         }
         
@@ -229,11 +233,12 @@ namespace Rental_Mobil_Esemka
 
         private void UC_ManajemenUser_Load(object sender, EventArgs e)
         {
-            TampilUser();
+           LoadData();
             
 
         }
 
+        //Klik DGV dan 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvUser.Rows[e.RowIndex].Cells[0].Value != null)
@@ -243,8 +248,9 @@ namespace Rental_Mobil_Esemka
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtEmail.Text = row.Cells[2].Value.ToString();
                 txtPass.Text = row.Cells[3].Value.ToString();
-
-                cmbRole.Text = row.Cells[4].Value.ToString();
+                
+                cmbLevel.Text = row.Cells[4].Value.ToString();
+                cmbRole.Text = row.Cells[5].Value.ToString();
 
             }
         }
@@ -256,7 +262,7 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = @"SELECT u.user_id, u.name, u.email, u.password, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id WHERE u.name LIKE @search OR u.email LIKE @search OR u.password LIKE @search OR [role].role_name LIKE @search";
+                    string sql = @"SELECT u.user_id, u.name, u.email, u.password, u.level, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id WHERE u.name LIKE @search OR u.email LIKE @search OR u.password LIKE @search OR u.level LIKE @search OR [role].role_name LIKE @search";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     da.SelectCommand.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
                     DataTable dt = new DataTable();

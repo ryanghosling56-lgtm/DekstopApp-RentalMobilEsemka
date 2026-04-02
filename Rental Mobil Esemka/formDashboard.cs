@@ -52,38 +52,18 @@ namespace Rental_Mobil_Esemka
 
         }
 
-        //exit aplikasi
+       
         private void manajemenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Yakin Ingin Keluar Dari Aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+           
         }
-        //log out akun
+        
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KoneksiDatabase.NamaEmail = null;
-            KoneksiDatabase.Level = null;
-
-            DialogResult dr = MessageBox.Show("Yakin Ingin Log Out?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dr == DialogResult.Yes)
-            {
-                formLogin login = new formLogin();
-
-                login.Show();
-                this.Close();
-
-
-
-            }
+           
         }
 
-        private void manajemenToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -146,6 +126,40 @@ namespace Rental_Mobil_Esemka
 
             PanelMainSide.Controls.Clear();
             PanelMainSide.Controls.Add(uC_DetailTransaksi); 
+        }
+
+        //Exit!!
+        private void manajemenToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Yakin Ingin Keluar Dari Aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        //Logout!!
+        private void settingToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            KoneksiDatabase.NamaEmail = null;
+            KoneksiDatabase.Level = null;
+
+            DialogResult dr = MessageBox.Show("Yakin Ingin Log Out?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                formLogin login = new formLogin();
+
+                login.Show();
+                this.Close();
+
+
+
+            }
+        }
+
+        private void dasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

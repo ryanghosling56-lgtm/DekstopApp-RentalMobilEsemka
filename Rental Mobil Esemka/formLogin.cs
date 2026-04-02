@@ -120,5 +120,10 @@ namespace Rental_Mobil_Esemka
 
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

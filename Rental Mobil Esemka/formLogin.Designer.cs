@@ -39,7 +39,6 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -131,7 +130,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Properties.Resources.car_rental_hotel_icon_141815;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource.car_rental_hotel_icon_141815;
             this.pictureBox1.Location = new System.Drawing.Point(153, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(293, 144);
@@ -156,30 +156,25 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(246, 263);
+            this.label4.Location = new System.Drawing.Point(260, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 31);
             this.label4.TabIndex = 7;
             this.label4.Text = "Login";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 186);
+            this.label3.Location = new System.Drawing.Point(178, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(310, 38);
             this.label3.TabIndex = 6;
             this.label3.Text = "Rental Mobil Esemka";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // formLogin
             // 

@@ -38,35 +38,38 @@
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.menuStrip6 = new System.Windows.Forms.MenuStrip();
             this.menuStrip7 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip11 = new System.Windows.Forms.MenuStrip();
             this.PanelMainSide = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manajemenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenTipeIdentitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip11 = new System.Windows.Forms.MenuStrip();
             this.manajementMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manajemenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.menuStrip6.SuspendLayout();
             this.menuStrip7.SuspendLayout();
-            this.PanelMainSide.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.menuStrip10.SuspendLayout();
             this.menuStrip11.SuspendLayout();
+            this.PanelMainSide.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.menuStrip8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,6 +86,7 @@
             this.panel1.Controls.Add(this.menuStrip7);
             this.panel1.Controls.Add(this.menuStrip10);
             this.panel1.Controls.Add(this.menuStrip11);
+            this.panel1.Controls.Add(this.menuStrip8);
             this.panel1.Location = new System.Drawing.Point(1, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 486);
@@ -92,7 +96,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 220);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 248);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(239, 24);
             this.menuStrip1.TabIndex = 0;
@@ -102,7 +106,7 @@
             // 
             this.menuStrip2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Location = new System.Drawing.Point(0, 196);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 224);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(239, 24);
             this.menuStrip2.TabIndex = 1;
@@ -114,7 +118,7 @@
             this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 168);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 196);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(239, 28);
             this.menuStrip3.TabIndex = 2;
@@ -126,7 +130,7 @@
             this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.detailTransaksiToolStripMenuItem});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 140);
+            this.menuStrip4.Location = new System.Drawing.Point(0, 168);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Size = new System.Drawing.Size(239, 28);
             this.menuStrip4.TabIndex = 3;
@@ -138,7 +142,7 @@
             this.menuStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manajemenCToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(0, 112);
+            this.menuStrip5.Location = new System.Drawing.Point(0, 140);
             this.menuStrip5.Name = "menuStrip5";
             this.menuStrip5.Size = new System.Drawing.Size(239, 28);
             this.menuStrip5.TabIndex = 4;
@@ -150,7 +154,7 @@
             this.menuStrip6.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manajemenTipeIdentitasToolStripMenuItem});
-            this.menuStrip6.Location = new System.Drawing.Point(0, 84);
+            this.menuStrip6.Location = new System.Drawing.Point(0, 112);
             this.menuStrip6.Name = "menuStrip6";
             this.menuStrip6.Size = new System.Drawing.Size(239, 28);
             this.menuStrip6.TabIndex = 5;
@@ -163,11 +167,35 @@
             this.menuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manajemenCustomerToolStripMenuItem});
-            this.menuStrip7.Location = new System.Drawing.Point(0, 56);
+            this.menuStrip7.Location = new System.Drawing.Point(0, 84);
             this.menuStrip7.Name = "menuStrip7";
             this.menuStrip7.Size = new System.Drawing.Size(239, 28);
             this.menuStrip7.TabIndex = 6;
             this.menuStrip7.Text = "menuStrip7";
+            // 
+            // menuStrip10
+            // 
+            this.menuStrip10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip10.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajementMobilToolStripMenuItem});
+            this.menuStrip10.Location = new System.Drawing.Point(0, 56);
+            this.menuStrip10.Name = "menuStrip10";
+            this.menuStrip10.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip10.TabIndex = 9;
+            this.menuStrip10.Text = "menuStrip10";
+            // 
+            // menuStrip11
+            // 
+            this.menuStrip11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip11.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip11.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manajemenUserToolStripMenuItem});
+            this.menuStrip11.Location = new System.Drawing.Point(0, 28);
+            this.menuStrip11.Name = "menuStrip11";
+            this.menuStrip11.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip11.TabIndex = 10;
+            this.menuStrip11.Text = "menuStrip11";
             // 
             // PanelMainSide
             // 
@@ -211,10 +239,22 @@
             this.label1.TabIndex = 4;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuStrip8
+            // 
+            this.menuStrip8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip8.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dasToolStripMenuItem});
+            this.menuStrip8.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip8.Name = "menuStrip8";
+            this.menuStrip8.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip8.TabIndex = 11;
+            this.menuStrip8.Text = "menuStrip8";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Properties.Resources._4092564_about_mobile_ui_profile_ui_user_website_114033;
+            this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource._4092564_about_mobile_ui_profile_ui_user_website_114033;
             this.pictureBox1.Location = new System.Drawing.Point(5, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
@@ -222,90 +262,12 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // detailTransaksiToolStripMenuItem
-            // 
-            this.detailTransaksiToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.transaction_minus_icon_244826;
-            this.detailTransaksiToolStripMenuItem.Name = "detailTransaksiToolStripMenuItem";
-            this.detailTransaksiToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
-            this.detailTransaksiToolStripMenuItem.Text = "Detail Transaksi";
-            this.detailTransaksiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.detailTransaksiToolStripMenuItem.Click += new System.EventHandler(this.detailTransaksiToolStripMenuItem_Click);
-            // 
-            // manajemenCToolStripMenuItem
-            // 
-            this.manajemenCToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.car_child_seat_icon_137817;
-            this.manajemenCToolStripMenuItem.Name = "manajemenCToolStripMenuItem";
-            this.manajemenCToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
-            this.manajemenCToolStripMenuItem.Text = "Manajemen CarSeat";
-            this.manajemenCToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manajemenCToolStripMenuItem.Click += new System.EventHandler(this.manajemenCToolStripMenuItem_Click);
-            // 
-            // manajemenTipeIdentitasToolStripMenuItem
-            // 
-            this.manajemenTipeIdentitasToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.identity_card_id_icon_123863;
-            this.manajemenTipeIdentitasToolStripMenuItem.Name = "manajemenTipeIdentitasToolStripMenuItem";
-            this.manajemenTipeIdentitasToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.manajemenTipeIdentitasToolStripMenuItem.Text = "Manajemen Tipe Identitas";
-            this.manajemenTipeIdentitasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manajemenTipeIdentitasToolStripMenuItem.Click += new System.EventHandler(this.manajemenTipeIdentitasToolStripMenuItem_Click);
-            // 
-            // manajemenCustomerToolStripMenuItem
-            // 
-            this.manajemenCustomerToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources._4092564_about_mobile_ui_profile_ui_user_website_114033;
-            this.manajemenCustomerToolStripMenuItem.Name = "manajemenCustomerToolStripMenuItem";
-            this.manajemenCustomerToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
-            this.manajemenCustomerToolStripMenuItem.Text = "Manajemen Customer";
-            this.manajemenCustomerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manajemenCustomerToolStripMenuItem.Click += new System.EventHandler(this.manajemenCustomerToolStripMenuItem_Click);
-            // 
-            // menuStrip10
-            // 
-            this.menuStrip10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip10.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajementMobilToolStripMenuItem});
-            this.menuStrip10.Location = new System.Drawing.Point(0, 28);
-            this.menuStrip10.Name = "menuStrip10";
-            this.menuStrip10.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip10.TabIndex = 9;
-            this.menuStrip10.Text = "menuStrip10";
-            // 
-            // menuStrip11
-            // 
-            this.menuStrip11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip11.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip11.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manajemenUserToolStripMenuItem});
-            this.menuStrip11.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip11.Name = "menuStrip11";
-            this.menuStrip11.Size = new System.Drawing.Size(239, 28);
-            this.menuStrip11.TabIndex = 10;
-            this.menuStrip11.Text = "menuStrip11";
-            // 
-            // manajementMobilToolStripMenuItem
-            // 
-            this.manajementMobilToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.car_vehicle_transport_icon_144665;
-            this.manajementMobilToolStripMenuItem.Name = "manajementMobilToolStripMenuItem";
-            this.manajementMobilToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
-            this.manajementMobilToolStripMenuItem.Text = "Manajement Mobil";
-            this.manajementMobilToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manajementMobilToolStripMenuItem.Click += new System.EventHandler(this.manajementMobilToolStripMenuItem_Click);
-            // 
-            // manajemenUserToolStripMenuItem
-            // 
-            this.manajemenUserToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.find_users_applications_search_2908;
-            this.manajemenUserToolStripMenuItem.Name = "manajemenUserToolStripMenuItem";
-            this.manajemenUserToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
-            this.manajemenUserToolStripMenuItem.Text = "Manajemen User";
-            this.manajemenUserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manajemenUserToolStripMenuItem.Click += new System.EventHandler(this.manajemenUserToolStripMenuItem_Click_1);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingToolStripMenuItem,
             this.manajemenToolStripMenuItem});
-            this.toolStripMenuItem1.Image = global::Rental_Mobil_Esemka.Properties.Resources.setting_icon_237775;
+            this.toolStripMenuItem1.Image = global::Rental_Mobil_Esemka.Resource.setting_icon_2377751;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
             this.toolStripMenuItem1.Text = "Settings";
@@ -314,20 +276,84 @@
             // 
             // settingToolStripMenuItem
             // 
-            this.settingToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.log_out_icon_icons_com_50106;
+            this.settingToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.log_out_icon_icons_com_50106;
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.settingToolStripMenuItem.Text = "Log Out";
             this.settingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click_1);
             // 
             // manajemenToolStripMenuItem
             // 
-            this.manajemenToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Properties.Resources.powercircleandlinesymbol_118369;
+            this.manajemenToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.powercircleandlinesymbol_1183691;
             this.manajemenToolStripMenuItem.Name = "manajemenToolStripMenuItem";
-            this.manajemenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.manajemenToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.manajemenToolStripMenuItem.Text = "Exit Application";
             this.manajemenToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manajemenToolStripMenuItem.Click += new System.EventHandler(this.manajemenToolStripMenuItem_Click_1);
+            // 
+            // detailTransaksiToolStripMenuItem
+            // 
+            this.detailTransaksiToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.transaction_minus_icon_244826;
+            this.detailTransaksiToolStripMenuItem.Name = "detailTransaksiToolStripMenuItem";
+            this.detailTransaksiToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.detailTransaksiToolStripMenuItem.Text = "Detail Transaksi";
+            this.detailTransaksiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.detailTransaksiToolStripMenuItem.Click += new System.EventHandler(this.detailTransaksiToolStripMenuItem_Click);
+            // 
+            // manajemenCToolStripMenuItem
+            // 
+            this.manajemenCToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.car_child_seat_icon_137817;
+            this.manajemenCToolStripMenuItem.Name = "manajemenCToolStripMenuItem";
+            this.manajemenCToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.manajemenCToolStripMenuItem.Text = "Manajemen CarSeat";
+            this.manajemenCToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.manajemenCToolStripMenuItem.Click += new System.EventHandler(this.manajemenCToolStripMenuItem_Click);
+            // 
+            // manajemenTipeIdentitasToolStripMenuItem
+            // 
+            this.manajemenTipeIdentitasToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.identity_card_id_icon_123863;
+            this.manajemenTipeIdentitasToolStripMenuItem.Name = "manajemenTipeIdentitasToolStripMenuItem";
+            this.manajemenTipeIdentitasToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
+            this.manajemenTipeIdentitasToolStripMenuItem.Text = "Manajemen Tipe Identitas";
+            this.manajemenTipeIdentitasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.manajemenTipeIdentitasToolStripMenuItem.Click += new System.EventHandler(this.manajemenTipeIdentitasToolStripMenuItem_Click);
+            // 
+            // manajemenCustomerToolStripMenuItem
+            // 
+            this.manajemenCustomerToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource._4092564_about_mobile_ui_profile_ui_user_website_114033;
+            this.manajemenCustomerToolStripMenuItem.Name = "manajemenCustomerToolStripMenuItem";
+            this.manajemenCustomerToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.manajemenCustomerToolStripMenuItem.Text = "Manajemen Customer";
+            this.manajemenCustomerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.manajemenCustomerToolStripMenuItem.Click += new System.EventHandler(this.manajemenCustomerToolStripMenuItem_Click);
+            // 
+            // manajementMobilToolStripMenuItem
+            // 
+            this.manajementMobilToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.car_vehicle_transport_icon_144665;
+            this.manajementMobilToolStripMenuItem.Name = "manajementMobilToolStripMenuItem";
+            this.manajementMobilToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.manajementMobilToolStripMenuItem.Text = "Manajement Mobil";
+            this.manajementMobilToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.manajementMobilToolStripMenuItem.Click += new System.EventHandler(this.manajementMobilToolStripMenuItem_Click);
+            // 
+            // manajemenUserToolStripMenuItem
+            // 
+            this.manajemenUserToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.find_users_applications_search_29081;
+            this.manajemenUserToolStripMenuItem.Name = "manajemenUserToolStripMenuItem";
+            this.manajemenUserToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.manajemenUserToolStripMenuItem.Text = "Manajemen User";
+            this.manajemenUserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.manajemenUserToolStripMenuItem.Click += new System.EventHandler(this.manajemenUserToolStripMenuItem_Click_1);
+            // 
+            // dasToolStripMenuItem
+            // 
+            this.dasToolStripMenuItem.Image = global::Rental_Mobil_Esemka.Resource.house_navigation_button_app_page_dashboard_home_icon_219341;
+            this.dasToolStripMenuItem.Name = "dasToolStripMenuItem";
+            this.dasToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.dasToolStripMenuItem.Text = "Dasboard";
+            this.dasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dasToolStripMenuItem.Click += new System.EventHandler(this.dasToolStripMenuItem_Click);
             // 
             // formDashboard
             // 
@@ -359,14 +385,16 @@
             this.menuStrip6.PerformLayout();
             this.menuStrip7.ResumeLayout(false);
             this.menuStrip7.PerformLayout();
-            this.PanelMainSide.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.menuStrip10.ResumeLayout(false);
             this.menuStrip10.PerformLayout();
             this.menuStrip11.ResumeLayout(false);
             this.menuStrip11.PerformLayout();
+            this.PanelMainSide.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.menuStrip8.ResumeLayout(false);
+            this.menuStrip8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,5 +426,7 @@
         private System.Windows.Forms.ToolStripMenuItem manajemenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manajementMobilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manajemenUserToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip8;
+        private System.Windows.Forms.ToolStripMenuItem dasToolStripMenuItem;
     }
 }

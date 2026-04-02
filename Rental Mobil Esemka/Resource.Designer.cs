@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rental_Mobil_Esemka.Properties {
+namespace Rental_Mobil_Esemka {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Rental_Mobil_Esemka.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Resource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Rental_Mobil_Esemka.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rental_Mobil_Esemka.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rental_Mobil_Esemka.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,16 @@ namespace Rental_Mobil_Esemka.Properties {
         internal static System.Drawing.Bitmap _4092564_about_mobile_ui_profile_ui_user_website_114033 {
             get {
                 object obj = ResourceManager.GetObject("4092564-about-mobile-ui-profile-ui-user-website_114033", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_icon_192645 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_icon_192645", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,29 @@ namespace Rental_Mobil_Esemka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit_closethesession_close_6317 {
+        internal static System.Drawing.Bitmap data_files_archive_folders_icon_148351 {
             get {
-                object obj = ResourceManager.GetObject("exit_closethesession_close_6317", resourceCulture);
+                object obj = ResourceManager.GetObject("data_files_archive_folders_icon_148351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap detail_icon_215012 {
+            get {
+                object obj = ResourceManager.GetObject("detail_icon_215012", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_to_app_119178 {
+            get {
+                object obj = ResourceManager.GetObject("exit-to-app_119178", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,26 @@ namespace Rental_Mobil_Esemka.Properties {
         internal static System.Drawing.Bitmap find_users_applications_search_2908 {
             get {
                 object obj = ResourceManager.GetObject("find_users_applications_search_2908", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_users_applications_search_29081 {
+            get {
+                object obj = ResourceManager.GetObject("find_users_applications_search_29081", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house_navigation_button_app_page_dashboard_home_icon_219341 {
+            get {
+                object obj = ResourceManager.GetObject("house_navigation_button_app_page_dashboard_home_icon_219341", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +223,39 @@ namespace Rental_Mobil_Esemka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap powercircleandlinesymbol_1183691 {
+            get {
+                object obj = ResourceManager.GetObject("powercircleandlinesymbol_1183691", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap searchmagnifierinterfacesymbol1_79893 {
             get {
                 object obj = ResourceManager.GetObject("searchmagnifierinterfacesymbol1_79893", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap server_database_archive_business_data_storage_folder_office_files_icon_232588 {
+            get {
+                object obj = ResourceManager.GetObject("server_database_archive_business_data_storage_folder_office_files_icon_232588", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap server_database_archive_business_data_storage_folder_office_files_icon_2325881 {
+            get {
+                object obj = ResourceManager.GetObject("server_database_archive_business_data_storage_folder_office_files_icon_2325881", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +273,29 @@ namespace Rental_Mobil_Esemka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap setting_icon_2377751 {
+            get {
+                object obj = ResourceManager.GetObject("setting_icon_2377751", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transaction_minus_icon_244826 {
             get {
                 object obj = ResourceManager.GetObject("transaction_minus_icon_244826", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transaction_minus_icon_2448261 {
+            get {
+                object obj = ResourceManager.GetObject("transaction_minus_icon_2448261", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
