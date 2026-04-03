@@ -43,7 +43,7 @@ namespace Rental_Mobil_Esemka
                 {
                     conn.Open();
 
-                    string sql = "SELECT u.user_id, u.name, u.email, u.password, u.level, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id";
+                    string sql = "SELECT u.user_id, u.name, u.email, u.password, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id";
 
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     DataTable dt = new DataTable();
@@ -80,18 +80,9 @@ namespace Rental_Mobil_Esemka
                     cmbRole.DataSource = dt;
 
 
-                    string sqlLevel = "SELECT DISTINCT user_id, level FROM users";
-                    SqlCommand cmdLevel = new SqlCommand(sqlLevel, conn);
-                    SqlDataReader drLevel = cmdLevel.ExecuteReader();
-                    DataTable dtLevel = new DataTable();
-                    dtLevel.Load(drLevel);
-
-                    cmbLevel.ValueMember = "user_id";
-                    cmbLevel.DisplayMember = "level";
-                    cmbLevel.DataSource = dtLevel;
 
                     cmbRole.SelectedIndex = -1;
-                    cmbLevel.SelectedIndex = -1; 
+                   
 
 
                     // Set default selection to none
@@ -117,13 +108,12 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "INSERT INTO Users (name, email, password, level, role_id) VALUES (@name, @email, @password, @level, @role_id)";
+                    string sql = "INSERT INTO Users (name, email, password, role_id) VALUES (@name, @email, @password, @role_id)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@name", txtName.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@password", txtPass.Text);
-                    cmd.Parameters.AddWithValue("@level",Convert.ToInt32(cmbLevel.SelectedValue));
                     cmd.Parameters.AddWithValue("@role_id", Convert.ToInt32(cmbRole.SelectedValue));
 
                     cmd.ExecuteNonQuery();
@@ -158,13 +148,12 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = "UPDATE Users SET name = @name, email = @email, password = @password, level = @level, role_id = @role_id WHERE user_id = @user_id";
+                    string sql = "UPDATE Users SET name = @name, email = @email, password = @password, role_id = @role_id WHERE user_id = @user_id";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@user_id", SelectedManajemenUserID);
                     cmd.Parameters.AddWithValue("@name", txtName.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@password", txtPass.Text);
-                    cmd.Parameters.AddWithValue("@level", cmbLevel.SelectedValue);
                     cmd.Parameters.AddWithValue("@role_id", cmbRole.SelectedValue);
                    
 
@@ -250,8 +239,7 @@ namespace Rental_Mobil_Esemka
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtEmail.Text = row.Cells[2].Value.ToString();
                 txtPass.Text = row.Cells[3].Value.ToString();
-                
-                cmbLevel.Text = row.Cells[4].Value.ToString();
+               
                 cmbRole.Text = row.Cells[5].Value.ToString();
 
             }
@@ -264,7 +252,7 @@ namespace Rental_Mobil_Esemka
                 try
                 {
                     conn.Open();
-                    string sql = @"SELECT u.user_id, u.name, u.email, u.password, u.level, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id WHERE u.name LIKE @search OR u.email LIKE @search OR u.password LIKE @search OR u.level LIKE @search OR [role].role_name LIKE @search";
+                    string sql = @"SELECT u.user_id, u.name, u.email, u.password, [role].role_name FROM Users u JOIN [role] ON u.role_id = [role].id WHERE u.name LIKE @search OR u.email LIKE @search OR u.password LIKE @search OR [role].role_name LIKE @search";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                     da.SelectCommand.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
                     DataTable dt = new DataTable();

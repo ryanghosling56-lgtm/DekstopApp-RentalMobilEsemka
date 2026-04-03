@@ -44,8 +44,6 @@
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbLevel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -166,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 288);
+            this.label2.Location = new System.Drawing.Point(739, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 34;
@@ -176,7 +174,7 @@
             // 
             this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(222, 307);
+            this.cmbRole.Location = new System.Drawing.Point(742, 235);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(121, 24);
             this.cmbRole.TabIndex = 36;
@@ -214,31 +212,11 @@
             this.label8.Text = "Manajemen User";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Level User";
-            // 
-            // cmbLevel
-            // 
-            this.cmbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLevel.FormattingEnabled = true;
-            this.cmbLevel.Location = new System.Drawing.Point(66, 307);
-            this.cmbLevel.Name = "cmbLevel";
-            this.cmbLevel.Size = new System.Drawing.Size(121, 24);
-            this.cmbLevel.TabIndex = 94;
-            // 
             // UC_ManajemenUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbLevel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.cmbRole);
@@ -283,7 +261,5 @@
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbLevel;
     }
 }

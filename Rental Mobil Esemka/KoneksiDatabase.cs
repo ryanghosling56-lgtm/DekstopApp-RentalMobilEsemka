@@ -10,9 +10,7 @@ namespace Rental_Mobil_Esemka
     public static class KoneksiDatabase
     {
         public static string connectionString = @"Data Source=TKJSTEWA-1\SQLEXPRESS;Initial Catalog=Rental_Mobil_Esemka;Integrated Security=True";
-        public static string NamaEmail;
-        public static string Level;
-        
+       
         
 
         public static  SqlConnection GetConn()

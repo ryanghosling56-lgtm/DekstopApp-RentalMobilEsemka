@@ -91,29 +91,30 @@
             this.panel1.Controls.Add(this.menuStrip10);
             this.panel1.Controls.Add(this.menuStrip11);
             this.panel1.Controls.Add(this.menuStrip8);
-            this.panel1.Location = new System.Drawing.Point(1, 100);
+            this.panel1.Location = new System.Drawing.Point(1, 78);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 486);
+            this.panel1.Size = new System.Drawing.Size(263, 508);
             this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.labelStatusUser);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(0, 433);
+            this.panel4.Location = new System.Drawing.Point(0, 455);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(239, 50);
+            this.panel4.Size = new System.Drawing.Size(263, 50);
             this.panel4.TabIndex = 13;
             // 
             // labelStatusUser
             // 
             this.labelStatusUser.BackColor = System.Drawing.Color.LightGray;
-            this.labelStatusUser.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusUser.Location = new System.Drawing.Point(40, 7);
             this.labelStatusUser.Name = "labelStatusUser";
-            this.labelStatusUser.Size = new System.Drawing.Size(192, 35);
+            this.labelStatusUser.Size = new System.Drawing.Size(213, 35);
             this.labelStatusUser.TabIndex = 4;
             this.labelStatusUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelStatusUser.Click += new System.EventHandler(this.labelStatusUser_Click);
@@ -135,7 +136,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 248);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(239, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(263, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -145,7 +146,7 @@
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Location = new System.Drawing.Point(0, 224);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(239, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(263, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -158,7 +159,7 @@
             this.toolStripMenuItem1});
             this.menuStrip3.Location = new System.Drawing.Point(0, 196);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip3.Size = new System.Drawing.Size(263, 28);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -201,7 +202,7 @@
             this.detailTransaksiToolStripMenuItem});
             this.menuStrip4.Location = new System.Drawing.Point(0, 168);
             this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip4.Size = new System.Drawing.Size(263, 28);
             this.menuStrip4.TabIndex = 3;
             this.menuStrip4.Text = "menuStrip4";
             // 
@@ -223,7 +224,7 @@
             this.manajemenCToolStripMenuItem});
             this.menuStrip5.Location = new System.Drawing.Point(0, 140);
             this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip5.Size = new System.Drawing.Size(263, 28);
             this.menuStrip5.TabIndex = 4;
             this.menuStrip5.Text = "menuStrip5";
             // 
@@ -245,7 +246,7 @@
             this.manajemenTipeIdentitasToolStripMenuItem});
             this.menuStrip6.Location = new System.Drawing.Point(0, 112);
             this.menuStrip6.Name = "menuStrip6";
-            this.menuStrip6.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip6.Size = new System.Drawing.Size(263, 28);
             this.menuStrip6.TabIndex = 5;
             this.menuStrip6.Text = "menuStrip6";
             this.menuStrip6.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip6_ItemClicked);
@@ -268,7 +269,7 @@
             this.manajemenCustomerToolStripMenuItem});
             this.menuStrip7.Location = new System.Drawing.Point(0, 84);
             this.menuStrip7.Name = "menuStrip7";
-            this.menuStrip7.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip7.Size = new System.Drawing.Size(263, 28);
             this.menuStrip7.TabIndex = 6;
             this.menuStrip7.Text = "menuStrip7";
             // 
@@ -290,7 +291,7 @@
             this.manajementMobilToolStripMenuItem});
             this.menuStrip10.Location = new System.Drawing.Point(0, 56);
             this.menuStrip10.Name = "menuStrip10";
-            this.menuStrip10.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip10.Size = new System.Drawing.Size(263, 28);
             this.menuStrip10.TabIndex = 9;
             this.menuStrip10.Text = "menuStrip10";
             // 
@@ -312,7 +313,7 @@
             this.manajemenUserToolStripMenuItem});
             this.menuStrip11.Location = new System.Drawing.Point(0, 28);
             this.menuStrip11.Name = "menuStrip11";
-            this.menuStrip11.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip11.Size = new System.Drawing.Size(263, 28);
             this.menuStrip11.TabIndex = 10;
             this.menuStrip11.Text = "menuStrip11";
             // 
@@ -334,7 +335,7 @@
             this.dasToolStripMenuItem});
             this.menuStrip8.Location = new System.Drawing.Point(0, 0);
             this.menuStrip8.Name = "menuStrip8";
-            this.menuStrip8.Size = new System.Drawing.Size(239, 28);
+            this.menuStrip8.Size = new System.Drawing.Size(263, 28);
             this.menuStrip8.TabIndex = 11;
             this.menuStrip8.Text = "menuStrip8";
             // 
@@ -353,9 +354,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelMainSide.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PanelMainSide.Location = new System.Drawing.Point(239, 1);
+            this.PanelMainSide.Location = new System.Drawing.Point(262, 1);
             this.PanelMainSide.Name = "PanelMainSide";
-            this.PanelMainSide.Size = new System.Drawing.Size(837, 587);
+            this.PanelMainSide.Size = new System.Drawing.Size(814, 587);
             this.PanelMainSide.TabIndex = 1;
             this.PanelMainSide.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMainSide_Paint);
             // 
@@ -367,16 +368,16 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 50);
+            this.panel2.Size = new System.Drawing.Size(263, 50);
             this.panel2.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 5);
+            this.label1.Location = new System.Drawing.Point(50, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 35);
+            this.label1.Size = new System.Drawing.Size(190, 35);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rental Mobil Esemka";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,7 +387,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.Image = global::Rental_Mobil_Esemka.Resource.car90_42507;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -14);
+            this.pictureBox1.Location = new System.Drawing.Point(9, -14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -404,8 +405,6 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "formDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard Page - Rental Mobil Esemka";

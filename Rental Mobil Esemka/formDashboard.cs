@@ -163,8 +163,7 @@ namespace Rental_Mobil_Esemka
         //Logout!!
         private void settingToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            KoneksiDatabase.NamaEmail = null;
-            KoneksiDatabase.Level = null;
+           
 
             DialogResult dr = MessageBox.Show("Yakin Ingin Log Out?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)

@@ -21,11 +21,27 @@ namespace Rental_Mobil_Esemka
         //Login!
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+            if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPass.Text)
+            {
+                MessageBox.Show("Email dan Password tidak boleh kosong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (!txtEmail.Text.Contains("@") || !txtEmail.Text.EndsWith(".com"))
+            {
+                MessageBox.Show("Format email tidak valid! Pastikan email mengandung '@' dan diakhiri dengan '.com'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtPass.Text.Length > 8)
+            {
+                MessageBox.Show("Password tidak boleh lebih dari 8 karakter!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
             using (SqlConnection conn = KoneksiDatabase.GetConn())
             {
                 try
                 {
-                    string sql = @"SELECT u.email, u.level, u.name, r.role_name FROM Users u JOIN role r ON u.role_id = r.id WHERE Email = @email AND Password = @password";
+                    string sql = @"SELECT u.name, u.email, u.password, r.role_name FROM Users u JOIN role r ON u.role_id = r.id WHERE Email = @email AND Password = @password";
                     SqlCommand cmd = new SqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -36,14 +52,12 @@ namespace Rental_Mobil_Esemka
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        KoneksiDatabase.NamaEmail = dr["email"].ToString();
-                        KoneksiDatabase.Level = dr["level"].ToString();
-
                         session.NamaUser = dr["name"].ToString();
+                        session.NamaEmail = dr["email"].ToString();
                         session.NamaRole = dr["role_name"].ToString(); 
 
 
-                        if (KoneksiDatabase.Level == "1")
+                        if (session.NamaRole == "admin")
                         {
                             MessageBox.Show("Login Berhasil Sebagai Admin!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -51,7 +65,7 @@ namespace Rental_Mobil_Esemka
                             dash1.Show();
                             this.Hide();
                         }
-                        else if (KoneksiDatabase.Level == "2")
+                        else if (session.NamaRole == "petugas")
                         {
 
                             MessageBox.Show("Login Berhasil Sebagai Petugas!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -62,7 +76,7 @@ namespace Rental_Mobil_Esemka
                         }
                         else
                         {
-                            MessageBox.Show("Level user tidak dikenali. Hubungi administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Role user tidak dikenali. Hubungi administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             conn.Close();
                         }
                     }
@@ -105,23 +119,23 @@ namespace Rental_Mobil_Esemka
         //checklist show password
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-            
-                txtPass.PasswordChar = '\0';
-
-
-
-            }
-            else
-            {
-                txtPass.PasswordChar = '*';
-
-
-            }
+          txtPass.PasswordChar = checkBox1.Checked ? '\0' : '•';
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            formRegistrasi formRegis = new formRegistrasi();
+            formRegis.Show();
+
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
