@@ -124,8 +124,8 @@
   <data name="server_database_archive_business_data_storage_folder_office_files_icon_232588" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\server_database_archive_business_data_storage_folder_office_files_icon_232588.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="car_child_seat_icon_137817" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\car_child_seat_icon_1378172.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="log-out_icon-icons.com_50106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\log-out_icon-icons.com_50106.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction_minus_icon_2448261" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\transaction_minus_icon_2448261.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,17 +133,20 @@
   <data name="setting_icon_2377751" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\setting_icon_2377751.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="calendar_icon_192645" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\calendar_icon_192645.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="server_database_archive_business_data_storage_folder_office_files_icon_2325881" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\server_database_archive_business_data_storage_folder_office_files_icon_2325881.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-out_icon-icons.com_50106" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\log-out_icon-icons.com_50106.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_vehicle_transport_icon_144665" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\car_vehicle_transport_icon_1446651.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="data_files_archive_folders_icon_148351" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\data_files_archive_folders_icon_148351.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="powercircleandlinesymbol_118369" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\powercircleandlinesymbol_1183691.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="identity_card_id_icon_123863" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\identity_card_id_icon_1238631.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +184,11 @@
   <data name="find_users_applications_search_29081" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\find_users_applications_search_29081.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="powercircleandlinesymbol_118369" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\powercircleandlinesymbol_1183691.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_border_grid_create_shape_plus_add_icon_232692" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\new_border_grid_create_shape_plus_add_icon_232692.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car_child_seat_icon_137817" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\car_child_seat_icon_1378172.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="users_group_customers_clients_icon-icons.com_72448" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\users_group_customers_clients_icon-icons.com_724481.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +196,13 @@
   <data name="4092564-about-mobile-ui-profile-ui-user-website_114033" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\4092564-about-mobile-ui-profile-ui-user-website_1140331.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar_icon_192645" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\calendar_icon_192645.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_border_grid_create_shape_plus_add_icon_2326921" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\new_border_grid_create_shape_plus_add_icon_2326921.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash-can_38501" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\trash-can_38501.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="353430-checkbox-edit-pen-pencil_107516" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\353430-checkbox-edit-pen-pencil_107516.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -317,5 +317,17 @@
   <ItemGroup>
     <None Include="Resources\calendar_icon_192645.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_border_grid_create_shape_plus_add_icon_232692.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_border_grid_create_shape_plus_add_icon_2326921.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-can_38501.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\353430-checkbox-edit-pen-pencil_107516.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

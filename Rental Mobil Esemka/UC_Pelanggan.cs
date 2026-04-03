@@ -16,5 +16,15 @@ namespace Rental_Mobil_Esemka
         {
             InitializeComponent();
         }
+
+        private void UC_Pelanggan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

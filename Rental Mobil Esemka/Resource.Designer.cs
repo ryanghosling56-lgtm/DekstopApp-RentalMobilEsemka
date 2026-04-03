@@ -63,6 +63,16 @@ namespace Rental_Mobil_Esemka {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _353430_checkbox_edit_pen_pencil_107516 {
+            get {
+                object obj = ResourceManager.GetObject("353430-checkbox-edit-pen-pencil_107516", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4092564_about_mobile_ui_profile_ui_user_website_114033 {
             get {
                 object obj = ResourceManager.GetObject("4092564-about-mobile-ui-profile-ui-user-website_114033", resourceCulture);
@@ -213,6 +223,26 @@ namespace Rental_Mobil_Esemka {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_border_grid_create_shape_plus_add_icon_232692 {
+            get {
+                object obj = ResourceManager.GetObject("new_border_grid_create_shape_plus_add_icon_232692", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_border_grid_create_shape_plus_add_icon_2326921 {
+            get {
+                object obj = ResourceManager.GetObject("new_border_grid_create_shape_plus_add_icon_2326921", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap powercircleandlinesymbol_118369 {
             get {
                 object obj = ResourceManager.GetObject("powercircleandlinesymbol_118369", resourceCulture);
@@ -296,6 +326,16 @@ namespace Rental_Mobil_Esemka {
         internal static System.Drawing.Bitmap transaction_minus_icon_2448261 {
             get {
                 object obj = ResourceManager.GetObject("transaction_minus_icon_2448261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_can_38501 {
+            get {
+                object obj = ResourceManager.GetObject("trash-can_38501", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -81,6 +81,44 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+        //DataGridView Cell Click!!
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+            if (e.RowIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                SelectedCarId = int.Parse(row.Cells[0].Value.ToString());
+                txtBrand.Text = row.Cells[1].Value.ToString();
+                txtPlat.Text = row.Cells[2].Value.ToString();
+                txtColor.Text = row.Cells[3].Value.ToString();
+                txtStatusUnit.Text = row.Cells[4].Value.ToString();
+                txtHargaRental.Text = row.Cells[5].Value.ToString();
+                cmbKursi.Text = row.Cells[6].Value.ToString();
+
+                pictureBoxUploud.Image = row.Cells[8].Value != null && File.Exists(row.Cells[8].Value.ToString()) ? Image.FromFile(row.Cells[8].Value.ToString()) : null;
+                pictureBoxUploud.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
+
+            //string path = dataGridView1.Rows[e.RowIndex].Cells["image_path"].Value.ToString();
+
+            //if (!(string.IsNullOrEmpty(path) && File.Exists(path)))
+            //{
+            //    pictureBox1.Image = Image.FromFile(path);
+            //    pictureBox1.Tag = path; // Simpan path gambar di Tag untuk digunakan nanti
+            //}
+            //else
+            //{
+            //    pictureBox1.Image = null; // Atau tampilkan gambar default jika path tidak valid
+            //    pictureBox1.Tag = null; // Pastikan Tag juga direset
+            //}
+        }
+
+
+
         private void LoadCmbKursi()
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
@@ -134,7 +172,8 @@ namespace Rental_Mobil_Esemka
         }
 
         //Create!!
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtBrand.Text) || string.IsNullOrEmpty(txtPlat.Text) || string.IsNullOrEmpty(txtColor.Text) || string.IsNullOrEmpty(dtpMobil.Text) || string.IsNullOrEmpty(txtStatusUnit.Text) || string.IsNullOrEmpty(txtHargaRental.Text))
 
@@ -154,21 +193,15 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@brd", txtBrand.Text);
                     cmd.Parameters.AddWithValue("@plate", txtPlat.Text);
                     cmd.Parameters.AddWithValue("@color", txtColor.Text);
-                    cmd.Parameters.AddWithValue("@year", dtpMobil.Text);
+                    cmd.Parameters.AddWithValue("@year", dtpMobil.Value.Date);
                     cmd.Parameters.AddWithValue("@status", txtStatusUnit.Text);
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
                     cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
+                  
+                    cmd.Parameters.AddWithValue("@image_path", pictureBoxUploud.Tag != null ? pictureBoxUploud.Tag.ToString() : (object)DBNull.Value);
 
                     //Validasi apakah gambar sudah diunggah atau belum
 
-                    if (pictureBoxUploud.Tag != null)
-                    {
-                        cmd.Parameters.AddWithValue("@image_path", pictureBoxUploud.Tag.ToString());
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@image_path", DBNull.Value);
-                    }
 
 
 
@@ -187,42 +220,19 @@ namespace Rental_Mobil_Esemka
         }
 
 
-        //Dgv Cell Click!! dan klik Path Gambar!!
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-
-
-            if (e.RowIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                SelectedCarId = int.Parse(row.Cells[0].Value.ToString());
-                txtBrand.Text = row.Cells[1].Value.ToString();
-                txtPlat.Text = row.Cells[2].Value.ToString();
-                txtColor.Text = row.Cells[3].Value.ToString();
-                txtStatusUnit.Text = row.Cells[4].Value.ToString();
-                txtHargaRental.Text = row.Cells[5].Value.ToString();
-                cmbKursi.Text = row.Cells[6].Value.ToString();
-            }
-
-
-            string path = dataGridView1.Rows[e.RowIndex].Cells["image_path"].Value.ToString();
-
-            if (!(string.IsNullOrEmpty(path) && File.Exists(path)))
-            {
-                pictureBox1.Image = Image.FromFile(path);
-                pictureBox1.Tag = path; // Simpan path gambar di Tag untuk digunakan nanti
-            }
-            else
-            {
-                pictureBox1.Image = null; // Atau tampilkan gambar default jika path tidak valid
-                pictureBox1.Tag = null; // Pastikan Tag juga direset
-            }
+           
         }
 
+
+
+        
+
         //Edit Mobil!!
-        private void button3_Click(object sender, EventArgs e)
+
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
             {
@@ -267,7 +277,14 @@ namespace Rental_Mobil_Esemka
         }
 
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+
+        //Delete Mobil!!
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
             {
@@ -294,6 +311,14 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+
+        //Search Mobil!!
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
@@ -350,6 +375,11 @@ namespace Rental_Mobil_Esemka
         }
 
         private void UC_Mobil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

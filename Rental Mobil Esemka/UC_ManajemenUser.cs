@@ -96,7 +96,7 @@ namespace Rental_Mobil_Esemka
 
         //Create User!!
 
-        private void btnTambah_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPass.Text) || string.IsNullOrEmpty(txtName.Text) || cmbRole.SelectedIndex == -1)
             {
@@ -130,8 +130,14 @@ namespace Rental_Mobil_Esemka
             }
         }
 
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         //Edit Data
-        private void btnEdit_Click(object sender, EventArgs e)
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             if (SelectedManajemenUserID == 0)
             {
@@ -155,7 +161,8 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@password", txtPass.Text);
                     cmd.Parameters.AddWithValue("@role_id", cmbRole.SelectedValue);
-                   
+
+
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -169,9 +176,13 @@ namespace Rental_Mobil_Esemka
                 }
             }
         }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         //Hapus Data
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (SelectedManajemenUserID == 0)
             {
@@ -198,7 +209,7 @@ namespace Rental_Mobil_Esemka
                         LoadData();
                         ClearField();
 
-                      
+
 
                     }
                     catch (Exception ex)
@@ -206,8 +217,12 @@ namespace Rental_Mobil_Esemka
                         MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                    
+
             }
+        }
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+           
         }
         
     
@@ -240,11 +255,13 @@ namespace Rental_Mobil_Esemka
                 txtEmail.Text = row.Cells[2].Value.ToString();
                 txtPass.Text = row.Cells[3].Value.ToString();
                
-                cmbRole.Text = row.Cells[5].Value.ToString();
+                cmbRole.Text = row.Cells[4].Value.ToString();
 
             }
         }
 
+
+        //Search Data
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
@@ -270,5 +287,7 @@ namespace Rental_Mobil_Esemka
         {
 
         }
+
+        
     }
 }
