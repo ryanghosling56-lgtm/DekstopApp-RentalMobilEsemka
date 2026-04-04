@@ -17,6 +17,7 @@ namespace Rental_Mobil_Esemka
     public partial class UC_Mobil : UserControl
     {
         private int SelectedCarId = 0; // Variabel untuk menyimpan ID mobil yang dipilih
+        
         public UC_Mobil()
         {
             InitializeComponent();
@@ -105,22 +106,11 @@ namespace Rental_Mobil_Esemka
             }
 
 
-            //string path = dataGridView1.Rows[e.RowIndex].Cells["image_path"].Value.ToString();
-
-            //if (!(string.IsNullOrEmpty(path) && File.Exists(path)))
-            //{
-            //    pictureBox1.Image = Image.FromFile(path);
-            //    pictureBox1.Tag = path; // Simpan path gambar di Tag untuk digunakan nanti
-            //}
-            //else
-            //{
-            //    pictureBox1.Image = null; // Atau tampilkan gambar default jika path tidak valid
-            //    pictureBox1.Tag = null; // Pastikan Tag juga direset
-            //}
+            
         }
 
 
-
+        //Load cmb kursi mobil!!
         private void LoadCmbKursi()
         {
             using (SqlConnection conn = KoneksiDatabase.GetConn())
@@ -149,19 +139,34 @@ namespace Rental_Mobil_Esemka
 
 
         //button uploud gambar!!
-
+        string pathuntukDB = string.Empty; // Variabel untuk menyimpan path gambar yang akan disimpan ke database
         private void btnUploud_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            using (OpenFileDialog openfile = new OpenFileDialog())
             {
 
                 {
-                    ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-                    if (ofd.ShowDialog() == DialogResult.OK)
+                    openfile.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+                    if (openfile.ShowDialog() == DialogResult.OK)
                     {
-                        string imagePath = ofd.FileName;
-                        pictureBoxUploud.Image = Image.FromFile(imagePath);
-                        pictureBoxUploud.Tag = ofd.FileName; // Simpan path gambar di Tag untuk digunakan nanti
+                        string foldertujuan = Path.Combine(Application.StartupPath, "Resources");
+
+                        if (!Directory.Exists(foldertujuan))
+                        {
+                            Directory.CreateDirectory(foldertujuan);
+                        }
+
+                        string namafile = Path.GetFileName(openfile.FileName);
+
+                        string fullpath = Path.Combine(foldertujuan, namafile);
+
+                        pathuntukDB = Path.Combine("Resources", namafile);
+
+                        File.Copy(openfile.FileName, fullpath, true);
+
+                        pictureBoxUploud.Image = Image.FromStream(openfile.OpenFile());
+                        pictureBoxUploud.Tag = openfile.FileName; // Simpan path gambar di Tag untuk digunakan nanti
 
                         pictureBoxUploud.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -200,7 +205,7 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
                     cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
                   
-                    cmd.Parameters.AddWithValue("@image_path", pictureBoxUploud.Tag != null ? pictureBoxUploud.Tag.ToString() : (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@image_path", pathuntukDB);
 
                     //Validasi apakah gambar sudah diunggah atau belum
 
@@ -252,9 +257,9 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
                     cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
 
-                    if (pictureBoxUploud.Tag != null)
+                    if (!string.IsNullOrEmpty(pathuntukDB))
                     {
-                        cmd.Parameters.AddWithValue("@image_path", pictureBoxUploud.Tag.ToString());
+                        cmd.Parameters.AddWithValue("@image_path", pathuntukDB);
                     }
                     else
                     {

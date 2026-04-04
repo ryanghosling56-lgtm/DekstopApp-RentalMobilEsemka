@@ -124,26 +124,33 @@ namespace Rental_Mobil_Esemka
 
         private void UC_Transaksi_Load(object sender, EventArgs e)
         {
-            if (session.NamaRole == "admin" )
-            {
-                btnCreate.Visible = false;
-                btnDelete.Visible = true;
-                btnEdit.Visible = true;
-            }
-            else if (session.NamaRole == "petugas")
-            {
-                btnCreate.Visible = true;
-                btnEdit.Visible = true ;
-                btnDelete.Visible = true ;
-            }
+
 
             TampilTransaksi();
             LoadCmbBox();
 
+            // Atur akses berdasarkan role
+            if (session.NamaRole == "admin")
+            {
+                btnCreate.Enabled = false;
+
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+
+            }
+            else if (session.NamaRole == "petugas")
+            {
+                btnCreate.Enabled = true;
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+
+
         }
 
         //btn create
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtTotal.Text) || string.IsNullOrEmpty(cmbPelanggan.Text) || string.IsNullOrEmpty(cmbMobil.Text) || string.IsNullOrEmpty(dtpRental.Text) || string.IsNullOrEmpty(dtpKembali.Text))
             {
@@ -178,6 +185,10 @@ namespace Rental_Mobil_Esemka
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
 
 
@@ -378,5 +389,6 @@ namespace Rental_Mobil_Esemka
         {
             HitungOtomatisHarga();
         }
+
     }
 }
