@@ -45,13 +45,14 @@ namespace Rental_Mobil_Esemka
         //Load dashboard
         private void formDashboard_Load(object sender, EventArgs e)
         {
+
             //Menampilkan nama user dan role di label status
             labelStatusUser.Text = $"{session.NamaUser} - {session.NamaRole}";
 
             if (session.NamaRole == "petugas")
             {
                 MenuDashboard.Visible = true;
-                MenuDetail.Visible = true;
+                MenuTransaksi.Visible = true;
                 MenuPelanggan.Visible = true;
                 MenuSetting.Visible = true;
 
@@ -63,11 +64,11 @@ namespace Rental_Mobil_Esemka
                 MenuTipeIdentitas.Visible = false;
             }
 
-            if (session.NamaRole == "admin")
+            else if (session.NamaRole == "admin")
             {
 
                 MenuDashboard.Visible = true;
-                MenuDetail.Visible = true;
+                MenuTransaksi.Visible = true;
                 MenuPelanggan.Visible = true;
                 MenuSetting.Visible = true;
 
@@ -75,13 +76,12 @@ namespace Rental_Mobil_Esemka
                 MenuMobil.Visible = true;
                 MenuCarseat.Visible = true;
                 MenuTipeIdentitas.Visible = true;
-
-
-
-
-
-
             }
+
+
+
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -187,6 +187,7 @@ namespace Rental_Mobil_Esemka
         {
             PanelMainSide.Controls.Clear();
             UC_Dashboard uC_Dashboard = new UC_Dashboard();
+
             uC_Dashboard.Dock = DockStyle.Fill;
 
             PanelMainSide.Controls.Add(uC_Dashboard);
@@ -247,22 +248,13 @@ namespace Rental_Mobil_Esemka
         private void MenuStripDetailTransaksi_Click(object sender, EventArgs e)
         {
             PanelMainSide.Controls.Clear();
-            UC_DetailTransaksi uC_DetailTransaksi = new UC_DetailTransaksi();
-            uC_DetailTransaksi.Dock = DockStyle.Fill;
+            UC_Transaksi uC_Transaksi = new UC_Transaksi();
+            uC_Transaksi.Dock = DockStyle.Fill;
 
-            PanelMainSide.Controls.Add(uC_DetailTransaksi);
+            PanelMainSide.Controls.Add(uC_Transaksi);
         }
 
         private void settingToolStripMenuItem_Click_2(object sender, EventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Yakin Ingin Keluar Dari Aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void manajemenToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Yakin Ingin Log Out?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
@@ -271,9 +263,27 @@ namespace Rental_Mobil_Esemka
 
                 login.Show();
                 this.Close();
-
-
             }
+        }
+
+        private void manajemenToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+
+
+            DialogResult dr = MessageBox.Show("Yakin Ingin Keluar Dari Aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+
+        }
+    
+
+
+        private void MenuTransaksi_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

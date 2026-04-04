@@ -32,9 +32,11 @@ namespace Rental_Mobil_Esemka
             txtBrand.Clear();
             txtPlat.Clear();
             txtColor.Clear();
-            txtStatusUnit.Clear();
+            
             txtHargaRental.Clear();
+            cmbStatus.SelectedIndex = -1;
             cmbKursi.SelectedIndex = -1;
+
             dtpMobil.Value = DateTime.Now;
 
         }
@@ -94,7 +96,7 @@ namespace Rental_Mobil_Esemka
                 txtBrand.Text = row.Cells[1].Value.ToString();
                 txtPlat.Text = row.Cells[2].Value.ToString();
                 txtColor.Text = row.Cells[3].Value.ToString();
-                txtStatusUnit.Text = row.Cells[4].Value.ToString();
+                cmbStatus.Text = row.Cells[4].Value.ToString();
                 txtHargaRental.Text = row.Cells[5].Value.ToString();
                 cmbKursi.Text = row.Cells[6].Value.ToString();
 
@@ -175,7 +177,7 @@ namespace Rental_Mobil_Esemka
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBrand.Text) || string.IsNullOrEmpty(txtPlat.Text) || string.IsNullOrEmpty(txtColor.Text) || string.IsNullOrEmpty(dtpMobil.Text) || string.IsNullOrEmpty(txtStatusUnit.Text) || string.IsNullOrEmpty(txtHargaRental.Text))
+            if (string.IsNullOrEmpty(txtBrand.Text) || string.IsNullOrEmpty(txtPlat.Text) || string.IsNullOrEmpty(txtColor.Text) || string.IsNullOrEmpty(dtpMobil.Text) || string.IsNullOrEmpty(cmbStatus.Text) || string.IsNullOrEmpty(txtHargaRental.Text))
 
 
             {
@@ -194,7 +196,7 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@plate", txtPlat.Text);
                     cmd.Parameters.AddWithValue("@color", txtColor.Text);
                     cmd.Parameters.AddWithValue("@year", dtpMobil.Value.Date);
-                    cmd.Parameters.AddWithValue("@status", txtStatusUnit.Text);
+                    cmd.Parameters.AddWithValue("@status", cmbStatus.Text);
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
                     cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
                   
@@ -246,7 +248,7 @@ namespace Rental_Mobil_Esemka
                     cmd.Parameters.AddWithValue("@plate", txtPlat.Text);
                     cmd.Parameters.AddWithValue("@color", txtColor.Text);
                     cmd.Parameters.AddWithValue("@year", dtpMobil.Text);
-                    cmd.Parameters.AddWithValue("@status", txtStatusUnit.Text);
+                    cmd.Parameters.AddWithValue("@status", cmbStatus.Text);
                     cmd.Parameters.AddWithValue("@harga_rental", txtHargaRental.Text);
                     cmd.Parameters.AddWithValue("@kursi", Convert.ToInt32(cmbKursi.SelectedValue));
 
@@ -377,6 +379,9 @@ namespace Rental_Mobil_Esemka
         private void UC_Mobil_Load(object sender, EventArgs e)
         {
 
+            TampilMobil();
+
+           
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,53 +56,17 @@
     <Compile Include="formDashboard.Designer.cs">
       <DependentUpon>formDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="formDetailTransaksi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formDetailTransaksi.Designer.cs">
-      <DependentUpon>formDetailTransaksi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formKursiTambahan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formKursiTambahan.Designer.cs">
-      <DependentUpon>formKursiTambahan.cs</DependentUpon>
-    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMobil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formMobil.Designer.cs">
-      <DependentUpon>formMobil.cs</DependentUpon>
-    </Compile>
     <Compile Include="formRegistrasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formRegistrasi.Designer.cs">
       <DependentUpon>formRegistrasi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formTransaksi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTransaksi.Designer.cs">
-      <DependentUpon>formTransaksi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formTypeIndentity.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTypeIndentity.Designer.cs">
-      <DependentUpon>formTypeIndentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formUser.Designer.cs">
-      <DependentUpon>formUser.cs</DependentUpon>
     </Compile>
     <Compile Include="KoneksiDatabase.cs" />
     <Compile Include="Program.cs" />
@@ -123,12 +88,6 @@
     </Compile>
     <Compile Include="UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_DetailTransaksi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_DetailTransaksi.Designer.cs">
-      <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ManajemenUser.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +113,12 @@
     <Compile Include="UC_TipeIdentitas.Designer.cs">
       <DependentUpon>UC_TipeIdentitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Transaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Transaksi.Designer.cs">
+      <DependentUpon>UC_Transaksi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formDashboard.resx">
       <DependentUpon>formDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,9 +138,6 @@
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_DetailTransaksi.resx">
-      <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_ManajemenUser.resx">
       <DependentUpon>UC_ManajemenUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_TipeIdentitas.resx">
       <DependentUpon>UC_TipeIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Transaksi.resx">
+      <DependentUpon>UC_Transaksi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
